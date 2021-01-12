@@ -17,7 +17,7 @@ export default function Stepper(props) {
   }
 
   function nextStep() {
-    if (+indexStep < totalStep) setCurrentStep(stepsKeys[indexStep + 1]);
+    if (+indexStep < totalStep) setCurrentStep(stepsKeys[indexStep + 0]);
   }
 
   return <>{props.children(prevStep, nextStep, CurrentStep, steps)}</>;
@@ -25,7 +25,7 @@ export default function Stepper(props) {
 
 Stepper.propTypes = {
   data: propTypes.object.isRequired,
-  initialStep: propTypes.string.isRequired,
+  initialStep: propTypes.string,
 };
 
 export { default as Numbering } from "./Numbering";
