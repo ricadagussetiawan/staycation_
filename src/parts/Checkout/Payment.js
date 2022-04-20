@@ -30,7 +30,7 @@ export default function Payment(props) {
                 <div className="col">
                   <dl>
                     <dd>Bank Central Asia</dd>
-                    <dd>2208 1996</dd>
+                    <dd>7000679016</dd>
                     <dd>Ricad Agus Setiawan</dd>
                   </dl>
                 </div>
@@ -43,7 +43,7 @@ export default function Payment(props) {
                 <div className="col">
                   <dl>
                     <dd>Bank Mandiri</dd>
-                    <dd>2208 1996</dd>
+                    <dd>7000679016</dd>
                     <dd>Ricad Agus Setiawan</dd>
                   </dl>
                 </div>
