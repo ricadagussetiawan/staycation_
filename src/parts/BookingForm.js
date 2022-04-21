@@ -48,9 +48,7 @@ class BookingForm extends Component {
 
     if (prevState.data.duration !== data.duration) {
       const startDate = new Date(data.date.startDate);
-      const endDate = new Date(
-        startDate.setDate(startDate.getDate() + +data.duration - 1)
-      );
+      const endDate = new Date(startDate.setDate(startDate.getDate() + +data.duration - 1));
       this.setState({
         ...this.state,
         data: {
@@ -83,49 +81,26 @@ class BookingForm extends Component {
 
     return (
       <div className="card bordered" style={{ padding: "60px 80px" }}>
-        <h4 className="mb-3">Start Booking</h4>
+        <h4 className="mb-3">Mulai Pemesanan</h4>
         <h5 className="h2 text-teal mb-4">
-          ${itemDetails.price}{" "}
-          <span className="text-gray-500 font-weight-light">
-            per {itemDetails.unit}
-          </span>
+          Rp{itemDetails.price} <span className="text-gray-500 font-weight-light">per {itemDetails.unit}</span>
         </h5>
 
-        <label htmlFor="duration">How long you will stay?</label>
-        <InputNumber
-          max={30}
-          suffix={" night"}
-          isSuffixPlural
-          onChange={this.updateData}
-          name="duration"
-          value={data.duration}
-        />
+        <label htmlFor="duration">Berapa lama Anda akan tinggal??</label>
+        <InputNumber max={30} suffix={" Malam"} isSuffixPlural onChange={this.updateData} name="duration" value={data.duration} />
 
-        <label htmlFor="date">Pick a date</label>
+        <label htmlFor="date">Pilih tanggal</label>
         <InputDate onChange={this.updateData} name="date" value={data.date} />
 
-        <h6
-          className="text-gray-500 font-weight-light"
-          style={{ marginBottom: 40 }}
-        >
-          You will pay{" "}
-          <span className="text-gray-900">
-            ${itemDetails.price * data.duration} USD
-          </span>{" "}
-          per{" "}
+        <h6 className="text-gray-500 font-weight-light" style={{ marginBottom: 40 }}>
+          apakah anda ingin melanjutkan pembayaran <span className="text-gray-900">Rp{itemDetails.price * data.duration}</span> per{" "}
           <span className="text-gray-900">
             {data.duration} {itemDetails.unit}
           </span>
         </h6>
 
-        <Button
-          className="btn"
-          hasShadow
-          isPrimary
-          isBlock
-          onClick={this.startBooking}
-        >
-          Continue to Book
+        <Button className="btn" hasShadow isPrimary isBlock onClick={this.startBooking}>
+          Lanjutkan untuk Memesan
         </Button>
       </div>
     );
