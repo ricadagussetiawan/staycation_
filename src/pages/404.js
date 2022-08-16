@@ -12,10 +12,10 @@ function NotFound(props) {
         style={{ height: "100vh" }}
       >
         <div className="col-4">
-          Are you lost?
+        Apakah kamu tersesat?
           <p className="pt-4">
-            Some page are still in development, maybe you can go back if you
-            want
+          Beberapa halaman masih dalam pengembangan, mungkin Anda dapat kembali jika Anda
+            ingin
           </p>
           <div>
             <Button
@@ -24,7 +24,7 @@ function NotFound(props) {
               onClick={() => props.history.goBack()}
               isLight
             >
-              Yes, bring me to safe place please
+              Ya, tolong bawa saya ke tempat yang aman
             </Button>
           </div>
         </div>
