@@ -33,24 +33,50 @@ export default function Header(props) {
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav ml-auto">
                 <li className={`nav-item${getNavLinkClass("/")}`}>
-                  <Button className="nav-link" type="link" href="/">
+                  {/* <Button className="nav-link" type="link" href="/">
                     Home
-                  </Button>
+                  </Button> */}
                 </li>
-                <li className={`nav-item${getNavLinkClass("/browse-by")}`}>
+
+                {/* Yang Asli Staycation tetapi tidak dipakai */}
+
+                {/* <li className={`nav-item${getNavLinkClass("/browse-by")}`}>
                   <Button className="nav-link" type="link" href="/browse-by">
                     Browse By
                   </Button>
+                </li> */}
+
+                {/* Akhit Yang Asli Staycation tetapi tidak dipakai */}
+
+                {/* Yang Dipakai */}
+                <li className="collapse navbar-collapse">
+                <a className="nav-link "href="https://staycation-ten.vercel.app/" class="list-group active">
+                Browse By
+                </a>
                 </li>
+                {/* Samapi Sini Yang Dipakai */}
+
+
                 <li className={`nav-item${getNavLinkClass("/stories")}`}>
                   <Button className="nav-link" type="link" href="/stories">
                     Stories
                   </Button>
                 </li>
-                <li className={`nav-item${getNavLinkClass("/agents")}`}>
+
+                {/* Yang Asli Staycation tetapi tidak dipakai */}
+
+                {/* <li className={`nav-item${getNavLinkClass("/agents")}`}>
                   <Button className="nav-link" type="link" href="/agents">
                     Agents
                   </Button>
+                </li> */}
+
+                {/* Akhit Yang Asli Staycation tetapi tidak dipakai */}
+
+                <li className="collapse navbar-collapse">
+                <a href="https://www.cekindo.com/services/hr-recruitment-indonesia?gclid=Cj0KCQjwuuKXBhCRARIsAC-gM0iWIICnqZaGyd8_u6uknF3uaDmo9381203rwgxwatpjr621w1nB8PoaAhL-EALw_wcB" class="list-group active">
+                Agents 
+                </a>
                 </li>
               </ul>
             </div>
