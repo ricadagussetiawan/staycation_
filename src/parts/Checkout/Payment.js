@@ -5,6 +5,7 @@ import { InputText, InputFile } from "elements/Form";
 
 import logoBca from "assets/images/logo-bca.jpg";
 import logoMandiri from "assets/images/logo-mandiri.jpg";
+import logoBri from "assets/images/logo-bri.jpg";
 
 export default function Payment(props) {
   const { data, ItemDetails, checkout } = props;
@@ -25,7 +26,7 @@ export default function Payment(props) {
               <p>Total: Rp{grandTotal} </p>
               <div className="row mt-4">
                 <div className="col-3 text-right">
-                  <img src={logoBca} alt="bank central asia" width="60" />
+                  <img src={logoBca} alt="Bank Central Asia" width="60" />
                 </div>
                 <div className="col">
                   <dl>
@@ -38,16 +39,30 @@ export default function Payment(props) {
 
               <div className="row">
                 <div className="col-3 text-right">
-                  <img src={logoMandiri} alt="mandiri" width="60" />
+                  <img src={logoMandiri} alt="Mandiri" width="60" />
                 </div>
                 <div className="col">
                   <dl>
                     <dd>Bank Mandiri</dd>
-                    <dd>7000679016</dd>
+                    <dd>0829321829317</dd>
                     <dd>Ricad Agus Setiawan</dd>
                   </dl>
                 </div>
               </div>
+
+              <div className="row">
+                <div className="col-3 text-right">
+                  <img src={logoBri} alt="BRI" width="60" />
+                </div>
+                <div className="col">
+                  <dl>
+                    <dd>Bank BRI</dd>
+                    <dd>982317391273141</dd>
+                    <dd>Ricad Agus Setiawan</dd>
+                  </dl>
+                </div>
+              </div>
+
             </Fade>
           </div>
           <div className="col-5 py-5" style={{ paddingLeft: 80 }}>
