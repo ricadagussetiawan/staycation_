@@ -79,7 +79,7 @@ class Checkout extends Component {
             style={{ height: "100vh" }}
           >
             <div className="col-3">
-              Pilih kamar dulu
+              Pilih Kamar Terlebih Dahulu
               <div>
                 <Button
                   className="btn mt-5"
@@ -87,7 +87,7 @@ class Checkout extends Component {
                   onClick={() => this.props.history.goBack()}
                   isLight
                 >
-                  Back
+                  Kembali
                 </Button>
               </div>
             </div>
@@ -97,8 +97,8 @@ class Checkout extends Component {
 
     const steps = {
       bookingInformation: {
-        title: "Booking Information",
-        description: "Please fill up the blank fields below",
+        title: "Informasi Pemesanan",
+        description: "Silakan isi kolom kosong di bawah ini",
         content: (
           <BookingInformation
             data={data}
@@ -109,8 +109,8 @@ class Checkout extends Component {
         ),
       },
       payment: {
-        title: "Payment",
-        description: "Kindly follow the instructions below",
+        title: "Pembayaran",
+        description: "Silakan ikuti petunjuk di bawah ini",
         content: (
           <Payment
             data={data}
@@ -121,7 +121,7 @@ class Checkout extends Component {
         ),
       },
       completed: {
-        title: "Yay! Completed",
+        title: "Yay! Pembayaran Selesai",
         description: null,
         content: <Completed />,
       },
@@ -159,7 +159,7 @@ class Checkout extends Component {
                           hasShadow
                           onClick={nextStep}
                         >
-                          Continue to Book
+                          Lanjutkan untuk Memesan
                         </Button>
                       </Fade>
                     )}
@@ -167,10 +167,10 @@ class Checkout extends Component {
                     className="btn"
                     type="link"
                     isBlock
-                    isLight
+                    isSuccess
                     href={`/properties/${checkout._id}`}
                   >
-                    Cancel
+                    Kembali
                   </Button>
                 </Controller>
               )}
@@ -189,7 +189,7 @@ class Checkout extends Component {
                           hasShadow
                           onClick={() => this._Submit(nextStep)}
                         >
-                          Continue to Book
+                          Lanjutkan Untuk Memesan
                         </Button>
                       </Fade>
                     )}
@@ -197,10 +197,10 @@ class Checkout extends Component {
                     className="btn"
                     type="button"
                     isBlock
-                    isLight
+                    isSuccess
                     onClick={prevStep}
                   >
-                    Cancel
+                    Kembali
                   </Button>
                 </Controller>
               )}
@@ -215,7 +215,7 @@ class Checkout extends Component {
                     hasShadow
                     href=""
                   >
-                    Back to Home
+                  Pembayaran Sedang Dalam Proses Konfirmasi
                   </Button>
                 </Controller>
               )}
