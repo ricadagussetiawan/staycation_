@@ -99,9 +99,12 @@ class BookingForm extends Component {
           </span>
         </h6>
 
-        <Button className="btn" hasShadow isPrimary isBlock onClick={this.startBooking}>
-          Lanjutkan untuk Memesan
+        <Button className="btn btn-success" hasShadow isPrimary isBlock onClick={this.startBooking}>
+          Lanjutkan Untuk Memesan
         </Button>
+        {/* <Button className="btn btn-success" hasShadow isPrimary isBlock onClick={this.startBooking}>
+          Booking From PaymentGateWays
+        </Button> */}
       </div>
     );
   }
